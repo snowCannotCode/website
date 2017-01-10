@@ -29,14 +29,13 @@ a{
 header{
   width:100%;
   background: url(../img/header-layout.png) no-repeat top left;
+  padding:1em;
 }
 h1{
   color:#fff;
-  margin: 5% 0 0 1%;
   float: left;
 }
 nav{
-  margin-top: 1.5em;
   float:right;
   width:380px;
 
