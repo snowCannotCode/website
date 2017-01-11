@@ -61,7 +61,7 @@ var portLayout = document.getElementById("lay-out");
 portLayout.addEventListener('click',function(){
 														portrait.style.visibility = 'hidden';
 														portrait.style.opacity = 0;
-														portrait.style.transform = "translate(-50%,1%)";
+														portrait.style.transform = "translate(-50%,-5%)";
 
 														portLayout.style.visibility = 'hidden';
 														portLayout.style.opacity = 0;
@@ -69,7 +69,7 @@ portLayout.addEventListener('click',function(){
 portraitLi.addEventListener('click',function(){
 														portrait.style.visibility = 'visible';
 														portrait.style.opacity = 1;
-														portrait.style.transform = "translate(-50%,5%)";
+														portrait.style.transform = "translate(-50%,0%)";
 
 														portLayout.style.visibility = 'visible';
 														portLayout.style.opacity = 1;
