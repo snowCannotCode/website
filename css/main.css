@@ -123,7 +123,23 @@ main section {box-sizing: border-box;padding: 3%;}
 /******* section.grey.group *******/
 .grey.group article,
 .grey.group figure {float:left;margin-left: 11%;}
+figure p {
+  visibility: hidden;
+  height: 100%;
+  opacity: 0;
+  transition: 0.4s;
+  position: relative;
+  color: white;
+  background: #000;
+  bottom: 1.5em;
+}
+figure a:hover {z-index: 1;}
+figure a:hover + p {
 
+  visibility: visible;
+  opacity: 0.5;
+  z-index: 2;
+}
 /*--------------------------------------------------------------------------------
 ------------------------------------ footer --------------------------------------
 --------------------------------------------------------------------------------*/
