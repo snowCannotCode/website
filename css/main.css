@@ -12,7 +12,7 @@ footer {margin:0.5em 0 0;}
 section {width: 100%; min-height: 200px;padding:1em 5em;}
 article {width: 300px;}
 ul,li {list-style-type: none;}
-p {font-size: 1em;}
+p {font-size: 0.8em;}
 a {text-decoration: none;color: #aaa;}
 .center {margin: 1em auto;}
 .white {background-color: #fff;}
@@ -118,7 +118,7 @@ main section {padding: 3%;}
 }
 .slide-img {width:1350px;}
 .slide-content {float:left;}
-
+.slide-content p:before{content: "->"}
 /******* section.skills ********/
 .skills {}
 .skill-list {width:18em;margin: 0em auto;}
