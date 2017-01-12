@@ -123,6 +123,17 @@ main section {padding: 3%;}
 .skills {}
 .skill-list {width:18em;margin: 0em auto;}
 .skill-list li {margin-right: 1.5em;}
+.skill-list a {
+  display: block;
+  height:100px;
+  width:100px;
+  background: url(../img/FE.png) no-repeat top left;
+}
+.skill-list .JS {background-position: 0 -100px;}
+.skill-list .HTML {background-position: bottom left;}
+.skill-list .CSS:hover {background-position: top right;}
+.skill-list .JS:hover {background-position: -100px -100px;}
+.skill-list .HTML:hover {background-position: bottom right;}
 /******* section.grey.group *******/
 .grey.group article,
 .grey.group figure {float:left;margin-left: 11%;}
