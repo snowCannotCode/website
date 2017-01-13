@@ -116,9 +116,23 @@ main section {padding: 3%;}
   overflow: hidden;
   float:left;
 }
-.slide-img {width:1350px;}
+.slide-img {width:1350px;position: relative;}
 .slide-content {float:left;}
 .slide-content p:before{content: "->"}
+.dot-img {
+  position: relative;
+  bottom: 1.5em;
+  left:30%;
+}
+.dot-img li{
+  margin-left: 1em;
+  width:26px;
+  height: 26px;
+  float: left;
+  background: url(../img/slide-dot.png) no-repeat top left;
+  cursor: pointer;
+}
+.dot-img li:first-child {background-position:top right;}
 /******* section.skills ********/
 .skills {}
 .skill-list {width:18em;margin: 0em auto;}
