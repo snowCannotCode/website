@@ -25,22 +25,22 @@ var ul_img=$(".slide-img");
 var li_img=ul_img.children();
 var img_sli=li_img.find("img");
 
-/*
+
 	//捕获窗口的宽度
+
 	var cliWidth = 320;
 	var div_slide=$(".slide");
 	//捕捉div_slide的宽度和高度
 	var diW=div_slide.width();
 	var diH=div_slide.height();
 	var Hw=diH/diW;
-	if(diW>=cliWidth){
-		var reW = div_slide.width(cliWidth);
+	if(diW>=window.innerWidth){
+		var reW = div_slide.width(cliWidth-10);
 		var reH = div_slide.height(Hw*diH);
 		img_sli.width(cliWidth);  //只改图片宽度，图片的高度会随之自动修改；
 		ul_img.height(reH);
 		ul_img.width(320*3);
 	}
-*/
 /** section.slide **/
 
 //间隔调用slide_animate函数

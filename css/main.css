@@ -13,11 +13,12 @@ html, body, header,footer,main,h1, h2, h3, p, ul, li,section,div,figure{
 body {font-size: 130%;font-family: "micro Yahei", Verdana, sans-serif;}
 main,
 footer {margin:0.5em 0 0;}
-section {width: 100%; min-height: 200px;padding:1em 5em;}
+section {width: 100%; min-height: 200px;}
 article {width: 300px;}
 ul,li {list-style-type: none;}
 p {font-size: 1em;}
 a {text-decoration: none;color: #aaa;}
+img {width:100%;}
 .center {margin: 1em auto;}
 .white {background-color: #fff;}
 .grey {background-color: #ddd;}
@@ -25,12 +26,12 @@ a {text-decoration: none;color: #aaa;}
 /** header **/
 header{
   width:100%;
-  height: 500px;
-  padding:2em 2em 0;
+  height: auto;
+
   background: url(../img/header-layout.png) no-repeat top left;
 }
-h1 {color:#fff;float: left;margin-right: 10%;}
-nav {float: right;padding: 1em 1em;width: 400px;}
+h1 {color:#fff;float: left; margin:5% 10%;}
+nav {float: right;margin:5%;}
 
 /** ul.ly-0 **/
 .ly-0>li {float: left;margin-right: 0.5em;}
@@ -40,13 +41,6 @@ nav {float: right;padding: 1em 1em;width: 400px;}
 .ly-0>li:hover ul {display:block;}
 .ly-1 {position:absolute;top:1.5em;}
 
-/** article根据需要去改宽高 **/
-header article{
-  clear: both;
-  position: relative;
-  bottom: -4em;
-  left: 40%;
-}
 
 /** div.portrait **/
 .portrait{
@@ -92,7 +86,7 @@ header article{
 /** main **/
 main {z-index:1;}
 main li {float:left;}
-main section {padding: 3%;}
+main section {}
 
 /** section.slide **/
 .slide {
@@ -100,13 +94,14 @@ main section {padding: 3%;}
   height:300px;
   overflow: hidden;
   float:left;
+  margin: 2.5%;
 }
 .slide-img {width:1350px;position: relative;}
-.slide-content {float:left;}
+.slide-content {float:left;margin:20px 20px 20px 0;}
 .slide-content p:before{content: "->"}
 .dot-img {
   position: relative;
-  bottom: 2em;
+  bottom: 50px;
   left:30%;
   width: 200px;
 }
@@ -121,8 +116,8 @@ main section {padding: 3%;}
 
 /** section.skills **/
 .skills {}
-.skill-list {width:400px;margin: 0em auto;}
-.skill-list li {margin-right: 1.5em;}
+.skill-list {margin: 0em auto;width:auto;width:450px;} /** @media max-width(320px) **/
+.skill-list li {margin: 5%;}
 .skill-list a {
   display: block;
   height:100px;
@@ -150,7 +145,6 @@ figure p {
 }
 figure a:hover {z-index: 1;}
 figure a:hover + p {
-
   visibility: visible;
   opacity: 0.5;
   z-index: 2;
@@ -160,15 +154,14 @@ figure a:hover + p {
 footer {
   background:url(../img/footer-layout.png) no-repeat bottom right;
   width: 100%;
-  padding: 1em;
 }
 footer article{
     width: 250px;
     position: relative;
-    bottom: -0.5em;
-    float:left;
+    float: left;
+    margin: 2%;
 }
-footer .presented {float: right;margin-right: 25px;}
+footer article:last-child {float: right;margin-right: 15%;}
 
 /** clear-fixed for all-floated elements **/
 .group:before,
@@ -179,3 +172,15 @@ footer .presented {float: right;margin-right: 25px;}
 /*------------------------------------------------------------------------------
 --------------------media-screen and (max-width:320px)--------------------------
 ------------------------------------------------------------------------------*/
+@media screen and (max-width:320px){
+  body{font-size: 110%;}
+  .grey.group article{margin-left: 1%;}
+  .skill-list {margin: 0em auto;width:auto;width:320px;}
+  .skill-list li{margin:1%;}
+}
+@media screen and (max-width:769px){
+  header{padding-top:20px;  }
+  h1,nav{float:none;margin:0% auto 2%;width:320px;}
+  .slide,.slide-content{margin:2% auto; float: none;}
+  .grey.group article{margin:2% 30%;}
+}
