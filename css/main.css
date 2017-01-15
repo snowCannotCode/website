@@ -1,27 +1,28 @@
 @charset "UTF-8";
 
+
+/*------------------------------------------------------------------------------
+----------------------------------media-all-------------------------------------
+------------------------------------------------------------------------------*/
 html, body, header,footer,main,h1, h2, h3, p, ul, li,section,div,figure{
   margin:0;
   padding:0;
   border:0;
   box-sizing:border-box;
 }
-body {font-size: 1.5em;}
+body {font-size: 130%;font-family: "micro Yahei", Verdana, sans-serif;}
 main,
 footer {margin:0.5em 0 0;}
 section {width: 100%; min-height: 200px;padding:1em 5em;}
 article {width: 300px;}
 ul,li {list-style-type: none;}
-p {font-size: 0.8em;}
+p {font-size: 1em;}
 a {text-decoration: none;color: #aaa;}
 .center {margin: 1em auto;}
 .white {background-color: #fff;}
 .grey {background-color: #ddd;}
 
-/*--------------------------------------------------------------------------------
------------------------------------- header --------------------------------------
---------------------------------------------------------------------------------*/
-
+/** header **/
 header{
   width:100%;
   height: 500px;
@@ -31,17 +32,7 @@ header{
 h1 {color:#fff;float: left;margin-right: 10%;}
 nav {float: right;padding: 1em 1em;width: 400px;}
 
-/* article根据需要去改宽高 */
-
-header article{
-  clear: both;
-  position: relative;
-  bottom: -4em;
-  left: 40%;
-}
-
-/******** ul.ly-0 ********/
-
+/** ul.ly-0 **/
 .ly-0>li {float: left;margin-right: 0.5em;}
 .li-0 {position:relative;}
 .ly-0>li a:hover {border-bottom: 2px #aaa solid;}
@@ -49,11 +40,15 @@ header article{
 .ly-0>li:hover ul {display:block;}
 .ly-1 {position:absolute;top:1.5em;}
 
+/** article根据需要去改宽高 **/
+header article{
+  clear: both;
+  position: relative;
+  bottom: -4em;
+  left: 40%;
+}
 
-/*--------------------------------------------------------------------------------
------------------------------------- div.portrait --------------------------------
---------------------------------------------------------------------------------*/
-
+/** div.portrait **/
 .portrait{
   opacity:0;
   visibility: hidden;
@@ -78,7 +73,7 @@ header article{
   opacity:0;
   visibility: hidden;
   position:fixed;
-  width:100%;
+  width:inherit;
   height:100%;
   top:0;
   left:0;
@@ -93,24 +88,13 @@ header article{
   opacity: 1;
 }
 .portrait.show{transform: translate(-50%,-10%);}
-/*
-.port-show{
-  opacity:1;
-  visibility:visible;
-}
-#lay-out.show{
-  opacity:1;
-  visibility: visible;
-}*/
 
-
-/*--------------------------------------------------------------------------------
------------------------------------- main ----------------------------------------
---------------------------------------------------------------------------------*/
+/** main **/
 main {z-index:1;}
 main li {float:left;}
 main section {padding: 3%;}
-/******* section.slide ********/
+
+/** section.slide **/
 .slide {
   width:450px;
   height:300px;
@@ -122,9 +106,9 @@ main section {padding: 3%;}
 .slide-content p:before{content: "->"}
 .dot-img {
   position: relative;
-  bottom: 1.5em;
+  bottom: 2em;
   left:30%;
-
+  width: 200px;
 }
 .dot-img li{
   margin-left: 1em;
@@ -134,10 +118,10 @@ main section {padding: 3%;}
   background: url(../img/slide-dot.png) no-repeat top left;
   cursor: pointer;
 }
-.dot-img li:first-child {background-position:top right;}
-/******* section.skills ********/
+
+/** section.skills **/
 .skills {}
-.skill-list {width:18em;margin: 0em auto;}
+.skill-list {width:400px;margin: 0em auto;}
 .skill-list li {margin-right: 1.5em;}
 .skill-list a {
   display: block;
@@ -150,7 +134,8 @@ main section {padding: 3%;}
 .skill-list .CSS:hover {background-position: top right;}
 .skill-list .JS:hover {background-position: -100px -100px;}
 .skill-list .HTML:hover {background-position: bottom right;}
-/******* section.grey.group *******/
+
+/** section.grey.group **/
 .grey.group article,
 .grey.group figure {float:left;margin-left: 11%;}
 figure p {
@@ -170,9 +155,7 @@ figure a:hover + p {
   opacity: 0.5;
   z-index: 2;
 }
-/*--------------------------------------------------------------------------------
------------------------------------- footer --------------------------------------
---------------------------------------------------------------------------------*/
+/** footer **/
 
 footer {
   background:url(../img/footer-layout.png) no-repeat bottom right;
@@ -186,10 +169,13 @@ footer article{
     float:left;
 }
 footer .presented {float: right;margin-right: 25px;}
-/*----------------------------------------
--- clear-fixed for all-floated elements --
-----------------------------------------*/
+
+/** clear-fixed for all-floated elements **/
 .group:before,
 .group:after {content: "";display: block;}
 .group:after {clear: both;}
 .group {zoom:1;}
+
+/*------------------------------------------------------------------------------
+--------------------media-screen and (max-width:320px)--------------------------
+------------------------------------------------------------------------------*/
