@@ -94,10 +94,10 @@ main section {}
   height:300px;
   overflow: hidden;
   float:left;
-  margin: 2.5%;
+  margin: 2.5% 0 0 5%;
 }
 .slide-img {width:1350px;position: relative;}
-.slide-content {float:left;margin:20px 20px 20px 0;}
+.slide-content {float:left;margin:20px 20px 20px 5%;}
 .slide-content p:before{content: "->"}
 .dot-img {
   position: relative;
@@ -170,17 +170,24 @@ footer article:last-child {float: right;margin-right: 15%;}
 .group {zoom:1;}
 
 /*------------------------------------------------------------------------------
---------------------media-screen and (max-width:320px)--------------------------
+--------------------media-screen and (max-width:320 450px 769px)--------------------------
 ------------------------------------------------------------------------------*/
-@media screen and (max-width:320px){
+
+@media screen and (max-width:857px){
+  header{padding-top:20px; }
+  h1,nav{float:none;margin:0% auto 2%;width:320px;}
+  .slide,.slide-content{margin:2% auto; float: none;}
+  .grey.group article{margin:2% 30%;}
+}
+@media screen and (max-width:450px){
   body{font-size: 110%;}
   .grey.group article{margin-left: 1%;}
   .skill-list {margin: 0em auto;width:auto;width:320px;}
   .skill-list li{margin:1%;}
+  .slide-content{margin:2% 5%; float: none;}
 }
-@media screen and (max-width:769px){
-  header{padding-top:20px;  }
-  h1,nav{float:none;margin:0% auto 2%;width:320px;}
-  .slide,.slide-content{margin:2% auto; float: none;}
-  .grey.group article{margin:2% 30%;}
+@media screen and (max-width:320px){
+  body{font-size: 110%;}
+  .grey.group article{margin-left: 1%;}
+
 }
