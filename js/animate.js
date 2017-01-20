@@ -34,13 +34,14 @@ var SLIDE = (function(){
 	for(var dots=0;dots<li_img.length;dots++){
 		var li_dot=$("<li></li>");
 		li_dot.appendTo(ul_dot);
+	}
 	//要对同 一个节点对象 使用 多个事件 的时候，使用bind（）方法；
-		li_dot.bind({
+	  var li_dots=ul_dot.children();
+		li_dots.bind({
 			mouseenter : function(){$(this).css({'background-position':'top right'});},
 			mouseleave : function(){$(this).css({'background-position':'top left'});}
 		});
-	}
-		return{
+		return {
 			//窗口发生变化时，重新定义轮播框，ul长度和img的宽高
 			  imgInit:function(classN){
 					var minWidth = 320; //Responsive 320px
@@ -64,11 +65,18 @@ var SLIDE = (function(){
 						if(li_img.length<2) return;
 				//注意这里的width是方法不是属性
 						var len=li_img.width(),i;
-						for(i=0;i<li_img.length;i++){
-							ul_img.animate({"left":(0-len*i +"px")},1000,function(){}).delay(2000);
+						for(var i=0, child = li_dots.first();i<li_img.length;i++){
+							ul_img.animate({"left":(0-len*i +"px")},1000,function(){
+								li_dots.css({'background-position':'top left'});  //先让所有的li_dot的css回复原样，再让特定的li的background position变成top right；
+								child.css({'background-position':'top right'});
+								child = child.next();
+							}).delay(2000);
 						}
+					},
+					ulhoverStop:function(){
+
 					}
-		}
+		};
 })();
 
 
@@ -90,7 +98,7 @@ SLIDE.imgInit(".slide");
 /** section.slide **/
 
 //间隔调用slide_animate函数
-setInterval(SLIDE.ulAnimate,4000);
+var slideStop = setInterval(SLIDE.ulAnimate,4000);
 
 
 });
