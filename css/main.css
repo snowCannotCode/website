@@ -113,6 +113,9 @@ main section {}
   background: url(../img/slide-dot.png) no-repeat top left;
   cursor: pointer;
 }
+.dot-img li:first-child{
+  background-position: top right;
+}
 
 /** section.skills **/
 .skills {}
