@@ -73,6 +73,7 @@ var SLIDE = (function(){
 							}).delay(2000);
 						}
 					},
+					//
 					ulhoverStop:function(){
 
 					}
