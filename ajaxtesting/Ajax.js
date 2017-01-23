@@ -5,7 +5,7 @@ function Tour(element,divC){
 	this.el = element;
 	this.divC = divC;
 	this.el.on('click','.show.paris',function(){
-		$.ajax('photos.html .photos .paris',{
+		$.ajax('photos.html',{
 			success:function(response){
 				tour.divC.html(response).fadeIn();
 			}
