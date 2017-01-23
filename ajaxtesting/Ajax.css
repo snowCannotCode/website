@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
 /*CSS Document*/
-
+ul,li{
+  list-style-type: none;
+}
 
 /*clear fixed*/
 .group:before,
