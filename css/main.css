@@ -30,7 +30,7 @@ header{
 
   background: url(../img/header-layout.png) no-repeat top left;
 }
-h1 {color:#fff;float: left; margin:5% 10%;}
+h1 {color:#fff;float: left; margin:5% 10%;font-size: 2em;}
 nav {float: right;margin:5%;}
 
 /** ul.ly-0 **/
