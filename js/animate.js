@@ -28,7 +28,9 @@ $(document).ready(function(){
 	});
 	portraitLi.click(function(){showPortrait()});
 	lay_out.click(function(){hidePortrait()});
-	
+	ulSlide.mouseenter(function(){
+			clearInterval(loop);
+	});
 	liDots.on('click',function(){
 			clearInterval(loop);
 		let dot=liDots.index($(this));
