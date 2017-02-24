@@ -11,7 +11,7 @@ let ulDot=$('.dot-img');
 $(document).ready(function(){
 	imgInit(ulSlide,slideCount);
 	liSlide.last().prependTo(ulSlide);
-  if(window.innerWidth <=450) ulSlide.css('margin-left',-window.innerWidth);
+  if(window.innerWidth <=450) ulSlide.css('margin-left',-320);
   else ulSlide.css('margin-left',-slideWidth);
 	let liDot = '';
 	for(let i=0;i<slideCount;i++){
