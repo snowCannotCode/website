@@ -20,7 +20,6 @@ p {font-size: 0.9em;}
 a {text-decoration: none;color: #aaa;}
 img {width:100%;}
 .center {margin: 1em auto;}
-.white {background-color: #fff;}
 .grey {background-color: #ddd;}
 
 /** header **/
@@ -34,13 +33,14 @@ h1 {color:#fff;float: left; margin:5% 10%;font-size: 2em;}
 nav {float: right;margin:5%;}
 
 /** ul.ly-0 **/
-.ly-0>li {float: left;margin-right: 0.5em;}
+.ly-0>li {float: left;margin-right: 0.5em;width:90px;}
 .li-0 {position:relative;}
 .ly-0>li a:hover {border-bottom: 2px #aaa solid;}
 .ly-0>li ul {display:none;font-size: 20px;line-height:1.5em;}
 .ly-0>li:hover ul {display:block;}
 .ly-1 {position:absolute;top:1.2em;}
-
+.ly-1 li{width:120px;}
+.ly-1 a{font-size: 0.8em;}
 
 /** div.portrait **/
 .portrait{
@@ -166,7 +166,8 @@ figure a:hover + p {
 /** footer **/
 
 footer {
-  background:url(../img/footer-layout.png) no-repeat bottom right;
+  background:rgba(0,0,0,0.9);
+  color:white;
   width: 100%;
 }
 footer section{
@@ -180,9 +181,11 @@ footer .ftr-contact{
 }
 .ftr-contact li{
   margin: 5% 1%;
+  width: 200px;
 }
 .ftr-contact span{
   display: block;
+  float: left;
   background: url(../img/fico.png) top left no-repeat;
   width: 20px;
   height: 20px;
@@ -195,6 +198,11 @@ span.third{
 }
 span.last{
   background-position: 0 -65px;
+}
+hr{
+  clear: both;
+  background: #000;
+  height: 25px;
 }
 /** clear-fixed for all-floated elements **/
 .group:before,
@@ -211,6 +219,9 @@ span.last{
   h1,nav{float:none;margin:0% auto 2%;width:320px;}
   .slide,.slide-content{margin:2% auto; float: none;}
   .grey.group article{margin:2% 30%;}
+  footer .ftr-contact{
+    float: none;
+  }
 }
 
 @media screen and (max-width:450px){

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* CSS Document */
+body{
+  background-color: #1a252f;
+}
+div{
+  position: relative;
+}
+div.container{
+margin: 10% auto;
+  width:240px;
+  height:240px;
+}
+.fire{
+  width: 200px;
+  height: 200px;
+  left:50%;
+  bottom: 0;
+}
+.fire div{
+  position: absolute;
+  left:50%;
+  bottom: 0;
+  width:50px;
+  height:100px;
+}
+.fire span{
+  display: inline-block;
+  position: absolute;
+  left:50%;
+  bottom: 0;
+  border-radius:50%;
+}
+
+.fireFront span{
+  background:radial-gradient(ellipse at center, #ecf0f1 0%, #ecf0f1 25%, rgba(236, 240, 241, 0) 100%);
+  width: 10px;
+  height:10px;
+  margin-left: -5px;
+  animation-name: fireFront;
+  animation-duration:0.2s;
+  animation-delay: 0.2s ;
+  animation-fill-mode:forwards;
+  animation-iteration-count:infinite;
+  z-index: 2;
+}
+.fireMid span{
+  background: -moz-radial-gradient(center, ellipse cover, #f1c40f 0%, #f1c40f 25%, rgba(241, 196, 15, 0) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #f1c40f 0%, #f1c40f 25%, rgba(241, 196, 15, 0) 100%);
+  background: radial-gradient(ellipse at center, #f1c40f 0%, #f1c40f 25%, rgba(241, 196, 15, 0) 100%);
+  width: 30px;
+  height:30px;
+  margin-left: -15px;
+  animation-name: fireMid;
+  animation-duration:0.2s;
+  animation-delay: 0.2s ;
+  animation-fill-mode:forwards;
+  animation-iteration-count:infinite;
+  z-index: 1;
+}
+.fireBack span{
+  background: -moz-radial-gradient(center, ellipse cover, #e67e22 0%, rgba(230, 126, 34, 0) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #e67e22 0%, rgba(230, 126, 34, 0) 100%);
+  background: radial-gradient(ellipse at center, #e67e22 0%, rgba(230, 126, 34, 0) 100%);
+  width: 30px;
+  height:30px;
+  margin-left: -15px;
+  animation-name: fireBack;
+  animation-duration:0.2s;
+  animation-delay: 0.2s ;
+  animation-fill-mode:forwards;
+  animation-iteration-count:infinite;
+  z-index: 0;
+}
+
+@keyframes fireFront{
+  0%{transform: translate(0,0);opacity: 0.4;}
+  10%{transform: translate(5px,-10px);}
+  20%{transform: translate(-5px,-15px);}
+  30%{transform: translate(5px,-20px);}
+  40%{transform: translate(-5px,-25px);}
+  50%{transform: translate(3px,-30px);opacity: 0.2;}
+  60%{transform: translate(-3px,-35px);}
+  70%{transform: translate(3px,-40px);}
+  80%{transform: translate(-3px,-45px);}
+  90%{transform: translate(1px,-50px);}
+  100%{transform: translate(-1px,-55px);opacity: 0;}
+}
+@keyframes fireMid{
+  0%{transform: translate(0,0);opacity: 1;}
+  10%{transform: translate(10px,-10px);}
+  20%{transform: translate(-10px,-18px);}
+  30%{transform: translate(10px,-26px);}
+  40%{transform: translate(-10px,-34px);}
+  50%{transform: translate(8px,-42px);opacity: 0.4;}
+  60%{transform: translate(-8px,-50px);}
+  70%{transform: translate(8px,-58px);}
+  80%{transform: translate(-8px,-66px);}
+  90%{transform: translate(4px,-74px);}
+  100%{transform: translate(-4px,-82px);opacity: 0;}
+}
+@keyframes fireBack{
+  0%{transform: translate(0,0);opacity: 1;}
+  10%{transform: translate(10px,-9px);}
+  20%{transform: translate(-10px,-19px);}
+  30%{transform: translate(10px,-29px);}
+  40%{transform: translate(-10px,-39px);}
+  50%{transform: translate(8px,-49px);opacity: 0.4;}
+  60%{transform: translate(-8px,-59px);}
+  70%{transform: translate(8px,-59px);}
+  80%{transform: translate(-8px,-69px);}
+  90%{transform: translate(4px,-79px);}
+  100%{transform: translate(-4px,-89px);opacity: 0;}
+}
+@media screen and (max-width:520px){
+  .container{
+    left:-40%;
+  }
+}
